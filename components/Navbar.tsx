@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import { Button } from './ui/button'
 import { Menu, LayoutDashboard } from 'lucide-react'
 import {
@@ -12,7 +13,7 @@ import {
 
 export default function Navbar() {
     return (
-        <nav className='flex h-14 shadow-md top-0 px-12 items-center justify-between'>
+        <nav className='flex h-14 shadow-md top-0 px-4 lg:px-8 items-center justify-between'>
             <div>Logo</div>
             <div className='hidden lg:flex space-x-2 items-center'>
                 <Button variant='ghost'>Home</Button>
@@ -26,12 +27,11 @@ export default function Navbar() {
                         <Button variant='outline'><Menu /></Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                        <DropdownMenuItem>Home</DropdownMenuItem>
+                        <DropdownMenuItem>Pricing</DropdownMenuItem>
+                        <DropdownMenuItem>Contact</DropdownMenuItem>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
-                        <DropdownMenuItem>Team</DropdownMenuItem>
-                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                        <DropdownMenuItem><Button><LayoutDashboard className='mr-2' />Dashboard</Button></DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
