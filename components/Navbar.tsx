@@ -13,12 +13,12 @@ import {
 
 export default function Navbar() {
     return (
-        <nav className='flex h-14 shadow-md top-0 px-4 lg:px-8 items-center justify-between'>
+        <nav className='flex fixed h-14 w-screen top-0 px-4 lg:px-8 items-center justify-between'>
             <div>Logo</div>
             <div className='hidden lg:flex space-x-2 items-center'>
-                <Button variant='ghost'>Home</Button>
-                <Button variant='ghost'>Pricing</Button>
-                <Button variant='ghost'>Contact</Button>
+                <Button variant='ghost' asChild><Link href='#home'>Home</Link></Button>
+                <Button variant='ghost' asChild><Link href='#pricing'>Pricing</Link></Button>
+                <Button variant='ghost' asChild><Link href='#contact'>Contact</Link></Button>
                 <Button variant='outline' className='shadow' ><LayoutDashboard className='mr-2' />Dashboard</Button>
             </div>
             <div className='lg:hidden flex items-center'>
@@ -27,11 +27,11 @@ export default function Navbar() {
                         <Button variant='outline'><Menu /></Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        <DropdownMenuItem>Home</DropdownMenuItem>
-                        <DropdownMenuItem>Pricing</DropdownMenuItem>
-                        <DropdownMenuItem>Contact</DropdownMenuItem>
+                        <DropdownMenuItem asChild><Link href='#home'>Home</Link></DropdownMenuItem>
+                        <DropdownMenuItem asChild><Link href='#pricing'>Pricing</Link></DropdownMenuItem>
+                        <DropdownMenuItem asChild><Link href='#contact'>Contact</Link></DropdownMenuItem>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem><Button><LayoutDashboard className='mr-2' />Dashboard</Button></DropdownMenuItem>
+                        <DropdownMenuItem asChild><Button><LayoutDashboard className='mr-2' />Dashboard</Button></DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
