@@ -13,13 +13,13 @@ import {
 
 export default function Navbar() {
     return (
-        <nav className='flex fixed h-14 w-screen top-0 px-4 lg:px-8 items-center justify-between'>
+        <nav className='flex fixed h-14 w-screen top-0 px-4 lg:px-8 items-center justify-between backdrop-blur'>
             <div>Logo</div>
             <div className='hidden lg:flex space-x-2 items-center'>
-                <Button variant='ghost' asChild><Link href='#home'>Home</Link></Button>
-                <Button variant='ghost' asChild><Link href='#pricing'>Pricing</Link></Button>
-                <Button variant='ghost' asChild><Link href='#contact'>Contact</Link></Button>
-                <Button variant='outline' className='shadow' ><LayoutDashboard className='mr-2' />Dashboard</Button>
+                <Button variant='ghost' asChild><Link href='#home' className='font-[700]'>Home</Link></Button>
+                <Button variant='ghost' asChild><Link href='#pricing' className='font-[700]'>Pricing</Link></Button>
+                <Button variant='ghost' asChild><Link href='#contact' className='font-[700]'>Contact</Link></Button>
+                <Button variant='outline' className='font-[700]' ><LayoutDashboard className='mr-2' />Dashboard</Button>
             </div>
             <div className='lg:hidden flex items-center'>
                 <DropdownMenu>
