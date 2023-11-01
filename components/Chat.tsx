@@ -8,12 +8,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
-
-interface ChatBoxProps {
-    // props
-}
-
-const ChatBox: FC<ChatBoxProps> = ({ }) => {
+const Chat: FC = () => {
     return (
         <Accordion type="single" collapsible className='fixed right-4 bottom-4'>
             <AccordionItem value="item-1">
@@ -30,4 +25,4 @@ const ChatBox: FC<ChatBoxProps> = ({ }) => {
     )
 }
 
-export default ChatBox
+export default Chat

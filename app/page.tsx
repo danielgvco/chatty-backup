@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
-import ChatBox from '@/components/ChatBox'
 import PricingCard from '@/components/PricingCard'
 
 export default function Home() {
